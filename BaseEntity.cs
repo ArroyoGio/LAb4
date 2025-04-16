@@ -8,7 +8,6 @@ public class BaseEntity : MonoBehaviour
     protected int Attack { get; set; }
     protected int Defense { get; set; }
 
-    // Método para inicializar los datos desde otro script
     public void DatosIniciales(string name, int life, int attack, int defense)
     {
         Name = name;
@@ -16,9 +15,10 @@ public class BaseEntity : MonoBehaviour
         Attack = attack;
         Defense = defense;
     }
+
     public void MostrarDatos()
     {
-        Debug.Log($"{Name} ha aparecido.");
+        Debug.Log("Entidad: " + Name);
         Debug.Log("Vida: " + Life);
         Debug.Log("Ataque: " + Attack);
         Debug.Log("Defensa: " + Defense);
@@ -29,11 +29,9 @@ public class BaseEntity : MonoBehaviour
         return Life;
     }
 
-
     public void RecibirDaño(int daño)
     {
         Life = Life - daño;
-
         if (Life < 0)
         {
             Life = 0;
@@ -47,5 +45,4 @@ public class BaseEntity : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

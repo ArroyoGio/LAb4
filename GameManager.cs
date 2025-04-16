@@ -16,19 +16,19 @@ public class GameManager : MonoBehaviour
         jugador.MostrarDatos();
 
         // Aplicamos los buffs al jefe
-        jefe.ApplyBuff("ataque", 20);  
-        jefe.ApplyBuff("defensa", 10); 
-        jefe.ApplyBuff("salud", 50);  
-        jefe.ApplyBuff("ataque", 15); 
+        jefe.ApplyBuff("ataque", 20);
+        jefe.ApplyBuff("defensa", 10);
+        jefe.ApplyBuff("salud", 50);
+        jefe.ApplyBuff("ataque", 15);
 
 
         jefe.RecibirDaño(30);   // El jugador ataca al jefe
         jugador.RecibirDaño(40); // El jefe ataca al jugador
 
-        jefe.RecibirDaño(50);   
-        jugador.RecibirDaño(60); 
+        jefe.RecibirDaño(50);
+        jugador.RecibirDaño(60);
 
-        jefe.RecibirDaño(100);  
+        jefe.RecibirDaño(100);
         jugador.RecibirDaño(50);
 
         if (jefe.GetLife() <= 0)
